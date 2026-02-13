@@ -1,10 +1,12 @@
 # FileShare Skill
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that copies files to a Nextcloud sync folder for automatic cloud access across all your devices.
+A [PAI](https://github.com/danielmiessler/PAI) skill that copies files to a Nextcloud sync folder for automatic cloud access across all your devices.
 
 ## What It Does
 
 When you say things like "send me that file" or "drop this to Nextcloud", the skill copies files to `~/Nextcloud/PAI-Drops/`. The Nextcloud client syncs that folder automatically, making files available on your phone, laptop, web UI, or any connected device.
+
+This is useful when using PAI remotely over SSH and you want a file from your PC at home and you can't remember the order of scp commands.
 
 Files are copied, not moved — originals stay in place. Filename collisions are handled with timestamps.
 
@@ -36,7 +38,7 @@ Shows what's currently in the drop folder.
 
 1. Install and configure the [Nextcloud desktop client](https://nextcloud.com/install/#install-clients)
 2. Ensure `~/Nextcloud/` is your sync root (or adjust the path in `SKILL.md`)
-3. Place this skill in your Claude Code skills directory (e.g., `~/.claude/skills/FileShare/`)
+3. Place this skill in your PAI skills directory (e.g., `~/.claude/skills/FileShare/`)
 
 ## Structure
 
